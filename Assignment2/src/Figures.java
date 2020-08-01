@@ -9,7 +9,10 @@ import java.util.Scanner;
 
 public class Figures {
 
+	
+	//initialize size variable 
 	public int size = 0;
+
 
 	public static void main(String[] args) {
 		
@@ -25,10 +28,10 @@ public class Figures {
 		int size;
 		size = scan1.nextInt();
 
-		// if figure size isn't odd prompt user to renter figure size
+		// if figure size isn't odd prompt user to reenter figure size
 		if (size % 2 != 1) {
 			System.out.print(
-					"Invalid figure size- must be an odd number" + "\n" + "\n" + "Renter the size of the figure: ");
+					"Invalid figure size- must be an odd number" + "\n" + "\n" + "Reenter the size of the figure: ");
 			size = scan1.nextInt();
 		}
 		Scanner scan2 = new Scanner(System.in);
