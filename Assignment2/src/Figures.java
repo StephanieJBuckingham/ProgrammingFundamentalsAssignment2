@@ -1,3 +1,10 @@
+/* Programming Fundamentals
+ * Stephanie Buckingham
+ * Programming Assignment 2
+ * 8/1/2020
+ */ 
+
+
 import java.util.Scanner;
 
 public class Figures {
@@ -5,6 +12,12 @@ public class Figures {
 	public int size = 0;
 
 	public static void main(String[] args) {
+		
+		//program label
+		System.out.println("Programming Fundamentals");
+		System.out.println("NAME: Stephanie Buckingham");
+		System.out.println("PROGRAMMING ASSIGNMENT 2");
+		System.out.println();
 
 		// prompt user to enter figure size
 		System.out.print("Enter a number for the size of the figure (odd number): ");
@@ -22,19 +35,26 @@ public class Figures {
 		System.out.println();
 
 		// show figure MENU to user and prompt them to select a figure
-		System.out.println("MENU:" + "\n" + "1. Print Box" + "\n" + "2. Print Diamond" + "\n" + "3. Print X" + "\n"
-				+ "4. Quit Program");
+		System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
+				+ "4. Quit program");
 		System.out.print("\n");
 		System.out.print("Please select an option: ");
 		int option;
 		option = scan2.nextInt();
+		
+		// if user inputs an invalid option prompt them to renter option
+		if (option > 4 || option < 1) { 
+			System.out.println("Invalid option- please select from options 1-4");
+			System.out.print("Please reselect an option: ");
+			option = scan2.nextInt();
+		}
 
 		// if user selects option 1 invoke method printBox and send user into MENU loop
 		if (option == 1) {
 			printBox(size);
 			System.out.println("");
-			System.out.println("MENU:" + "\n" + "1. Print Box" + "\n" + "2. Print Diamond" + "\n" + "3. Print X" + "\n"
-					+ "4. Quit Program");
+			System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
+					+ "4. Quit program");
 			System.out.print("\n");
 			System.out.print("Please select an option: ");
 			option = scan2.nextInt();
@@ -45,8 +65,8 @@ public class Figures {
 		if (option == 2) {
 			printDiamond(size);
 			System.out.println("");
-			System.out.println("MENU:" + "\n" + "1. Print Box" + "\n" + "2. Print Diamond" + "\n" + "3. Print X" + "\n"
-					+ "4. Quit Program");
+			System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
+					+ "4. Quit program");
 			System.out.print("\n");
 			System.out.print("Please select an option: ");
 			option = scan2.nextInt();
@@ -57,8 +77,8 @@ public class Figures {
 		if (option == 3) {
 			printX(size);
 			System.out.println("");
-			System.out.println("MENU:" + "\n" + "1. Print Box" + "\n" + "2. Print Diamond" + "\n" + "3. Print X" + "\n"
-					+ "4. Quit Program");
+			System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
+					+ "4. Quit program");
 			System.out.print("\n");
 			System.out.print("Please select an option: ");
 			option = scan2.nextInt();
