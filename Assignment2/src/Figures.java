@@ -13,85 +13,61 @@ public class Figures {
 
 	public static void main(String[] args) {
 
+		int size;
+		int option = 0;
+		Scanner scan = new Scanner(System.in);
+
 		// program label
 		System.out.println("Programming Fundamentals");
 		System.out.println("NAME: Stephanie Buckingham");
-		System.out.println("PROGRAMMING ASSIGNMENT 2");
-		System.out.println();
+		System.out.println("PROGRAMMING ASSIGNMENT 2\n");
 
 		// prompt user to enter figure size
 		System.out.print("Enter a number for the size of the figure (odd number): ");
-		Scanner scan1 = new Scanner(System.in);
-		int size;
-		size = scan1.nextInt();
+		size = scan.nextInt();
+
 
 		// if figure size isn't odd prompt user to reenter figure size
-		if (size % 2 != 1) {
-			System.out.print(
-					"Invalid figure size- must be an odd number" + "\n" + "\n" + "Reenter the size of the figure: ");
-			size = scan1.nextInt();
+		while (size % 2 != 1) {
+			System.out.println("Invalid figure size- must be an odd number\n");
+			System.out.print("Reenter the size of the figure: ");
+			size = scan.nextInt();
 		}
-		Scanner scan2 = new Scanner(System.in);
-		System.out.println();
-
-		// show figure MENU to user and prompt them to select a figure
-		System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
-				+ "4. Quit program");
-		System.out.print("\n");
-		System.out.print("Please select an option: ");
-		int option;
-		option = scan2.nextInt();
 
 		// if user inputs an invalid option prompt them to renter option
-		if (option > 4 || option < 1) {
-			System.out.println("Invalid option- please select from options 1-4");
-			System.out.print("Please reselect an option: ");
-			option = scan2.nextInt();
-		}
-
-		// if user selects option 1 invoke method printBox and send user into MENU loop
-		if (option == 1) {
-			printBox(size);
-			System.out.println("");
-			System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
-					+ "4. Quit program");
+		while (option != 4) {
+			
+			// show figure MENU to user and prompt them to select a figure
 			System.out.print("\n");
+			System.out.println("MENU:\n" + "1. Print box\n" + "2. Print X\n" + "3. Print diamond\n"
+					+ "4. Quit program\n");
 			System.out.print("Please select an option: ");
-			option = scan2.nextInt();
-		}
-
-		// if user selects option 2 invoke method printDiamond and send user into MENU
-		// loop
-		if (option == 2) {
-			printDiamond(size);
-			System.out.println("");
-			System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
-					+ "4. Quit program");
+			option = scan.nextInt();
 			System.out.print("\n");
-			System.out.print("Please select an option: ");
-			option = scan2.nextInt();
-			System.out.println("");
-		}
+			
+			// if user selects option 1 invoke method printBox and send user into MENU loop
+			if (option == 1) {
+				printBox(size);
+			}
 
-		// if user selects option 3 invoke method printX and send user into MENU loop
-		if (option == 3) {
-			printX(size);
-			System.out.println("");
-			System.out.println("MENU:" + "\n" + "1. Print box" + "\n" + "2. Print diamond" + "\n" + "3. Print X" + "\n"
-					+ "4. Quit program");
-			System.out.print("\n");
-			System.out.print("Please select an option: ");
-			option = scan2.nextInt();
-			System.out.println("");
-		}
+			// if user selects option 2 invoke method printDiamond and send user into MENU
+			// loop
+			if (option == 2) {
+				printDiamond(size);
+			}
 
-		// if user selects option 4 print "Good bye!"
-		if (option == 4) {
-			System.out.println("Good bye!");
-			System.exit(0);
+			// if user selects option 3 invoke method printX and send user into MENU loop
+			if (option == 3) {
+				printX(size);
+			}
+
+			// if user selects option 4 print "Good bye!"
+			if (option == 4) {
+				System.out.println("Good bye!");
+				System.exit(0);
+			}
+
 		}
-		scan1.close();
-		scan2.close();
 	}
 
 	// printBox method
