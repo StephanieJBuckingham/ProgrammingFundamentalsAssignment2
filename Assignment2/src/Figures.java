@@ -1,5 +1,6 @@
-/* Programming Fundamentals
- * Stephanie Buckingham
+/* Stephanie Buckingham
+ * Programming Fundamentals
+ * Summer Session II
  * Programming Assignment 2
  * 8/1/2020
  */
