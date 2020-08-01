@@ -2,21 +2,18 @@
  * Stephanie Buckingham
  * Programming Assignment 2
  * 8/1/2020
- */ 
-
+ */
 
 import java.util.Scanner;
 
 public class Figures {
 
-	
-	//initialize size variable 
+	// initialize size variable
 	public int size = 0;
 
-
 	public static void main(String[] args) {
-		
-		//program label
+
+		// program label
 		System.out.println("Programming Fundamentals");
 		System.out.println("NAME: Stephanie Buckingham");
 		System.out.println("PROGRAMMING ASSIGNMENT 2");
@@ -44,9 +41,9 @@ public class Figures {
 		System.out.print("Please select an option: ");
 		int option;
 		option = scan2.nextInt();
-		
+
 		// if user inputs an invalid option prompt them to renter option
-		if (option > 4 || option < 1) { 
+		if (option > 4 || option < 1) {
 			System.out.println("Invalid option- please select from options 1-4");
 			System.out.print("Please reselect an option: ");
 			option = scan2.nextInt();
