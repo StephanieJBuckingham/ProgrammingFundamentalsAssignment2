@@ -34,7 +34,7 @@ public class Figures {
 			size = scan.nextInt();
 		}
 
-		// if user inputs an invalid option prompt them to renter option
+		// loop to send user to menu to pick option, shows figure, then shows to menu again
 		while (option != 4) {
 			
 			// show figure MENU to user and prompt them to select a figure
@@ -45,23 +45,22 @@ public class Figures {
 			option = scan.nextInt();
 			System.out.print("\n");
 			
-			// if user selects option 1 invoke method printBox and send user into MENU loop
+			// invoke method printBox 
 			if (option == 1) {
 				printBox(size);
 			}
 
-			// if user selects option 2 invoke method printDiamond and send user into MENU
-			// loop
+			// option 2 invoke method printDiamond 
 			if (option == 2) {
 				printDiamond(size);
 			}
 
-			// if user selects option 3 invoke method printX and send user into MENU loop
+			// option 3 invoke method printX 
 			if (option == 3) {
 				printX(size);
 			}
 
-			// if user selects option 4 print "Good bye!"
+			// option 4 prints "Good bye!"
 			if (option == 4) {
 				System.out.println("Good bye!");
 				System.exit(0);
